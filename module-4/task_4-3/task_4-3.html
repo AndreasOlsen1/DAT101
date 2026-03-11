@@ -8,22 +8,39 @@
 <h2>Task 4.3:</h2>
 <p></p>
 <fieldset>
+<!-- hva betyr fieldset? Jo her lages en ramme rundt alle knappene og outputene som hører til task1-->
   <legend>Task 1: Rectangle</legend>
+  <!-- Ved å bruke legend lager vi en tittel på fieldset boksen. Denne tittelen er Task 1: Rectangle -->
   <label for="txtRectWidth">Width:</label>
+  <!-- Her lager vi en tekst inne i boksen som vi skal knytte til et inputfelt for bredde-->
+  <!-- teksten som kommer fram er width, men denne skal knyttes til et input felt som heter-->
+   <!-- med id txtRectWidth som er koden som kommer under-->
   <input type="number" id="txtRectWidth" value="0" style="width:4em">
+  <!-- Dette input feltet gjør at label og input hører sammen. Input betyr at det lages et felt-->
+   <!-- der en person kan skrive inn noe. type = "number" betyr at feltet skal bare kunne inneholde tall-->
+    <!-- id = "txtRectWidth" er navnet på identiteten til dette input feltet. Value er er startverdien-->
+     <!-- som står i inntastningsfeltet når man åpner nettsiden, style="width:4em" bestemmer bredden på feltet -->
   <label for="txtRectHeight">Height:</label>
   <input type="number" id="txtRectHeight" value="0" style="width:4em">
   <input type="button" id="cmbTask1Calculate" value="Calculate">
+    <!-- Dette input feltet er en knapp. type = "button" betyr at det skal være en knapp, id er navnet på knappen, value er teksten som skal stå på knappen -->
+   
   <p id="txtTask1Output">
     Circumference = 0, Area = 0
   </p>
+  <!-- Dette er et felt der vi viser resultatene av utregningen, vi må ha id for at blant annet javascript-->
+<!-- skal kunne finne dette tekstområdet og gjøre endringer der slik at vi kan få til utregninger.   -->
 </fieldset>
 <p></p>
 <fieldset>
   <legend>Task 2: Text</legend>
   <label for="txtTask2Word">Type a word:</label>
+  <!-- her er teksten til inntastningsboksen-->
   <input type="text" id="txtTask2Word" value="" style="width: 10em"> (hit enter!)
+  <!-- her har vi selve boksen der vi skriver inn tekst. -->
   <p id="txtTask2Output">Number of words = 0</p>
+
+  <!-- her vises ressultatene av hvor mange ord som er skrevet inn-->
 </fieldset>
 <p></p>
 <fieldset>
@@ -97,9 +114,22 @@
   </div>
 </fieldset>
 <ol>
-  <li>[Write the question here, and copy this for more questions]</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
+  <li>[In this assignment, we use the DOM. Explain how this library can help us develop interactive web
+pages.]</li>
+  <p>[DOm handler om å få javascript til å samhandle med html. html er strukturen på siden men javascript lar oss via dom kunne endre på siden og gjøre den mer interaktiv. vi kan med andre ord få gjort forskjellige handlinger uten å måtte laste inn en ny side eller siden på nytt. DOM gjør med andre ord websiden mer dynamisk. ]</p>
+  <li>[What is an event? Simply explain what happens when we add an event listener to an object.]</li>
+  <p>[Et event handler om at vi gjør noe på siden slik som å taste inn noen taster eller klikke på knapper eller bevege musen over spesifikk områder. En eventlistener er en type kode som venter på at det skal forekomme et event og når det gjør det får den f.eks en funksjon til å kjøre som gjør at noe interaktiv code fører til forandringer på siden og at siden kan bli interaktiv. ]</p>
+  <li>[Sometimes we need to use an event object to get data from the event. Explain how this event
+object is structured, don't explain all functions or attributes. Try to explain, for example, how to
+retrieve data from a keyboard or mouse.]</li>
+  <p>[Et event objekt er data knyttet til et event som finner sted for eksempel å trykke på en knapp. i en eventlistener så kan man kalle på en funksjon og dersom denne funksjonen hr et parameter sender vi evetnobjektet inn i dette parameteret. Dersom det ikke er tilfellet ignoreres eventobjektet. eventlistener sender ut obektet til funksjonsparameter om mulig. ]</p>
+  <li>[Explain the main difference between DOM id and DOM name. Can we have identical IDs?]</li>
+  <p>[dom id is er et spesifikt element i html, det kan ikke finnes flere elementer med samme id. dom name kan det finnes flere elementer med samme navn. De vil da kunne grupperes flere radioknapper kan for eksempel ha samme navn, og i disse tilfelene kan bare et alternativ velges. vi kan ved å bruke document.getElementsByName() få en liste med flere elementer. vi bruker dom name for å gruppere elementer sammen og dom id for å bare lete etter et element.  ]</p>
 </ol>
 <script type="module" src="./task_4-3.mjs" defer></script>
+<!-- Denne er viktig da den sier til html filen at man skal laste inn javascript filen -->
+<!-- type=module betyr at html filen skal kjøre javascript modulen, når html filen leses.  -->
+ <!-- med andre ord så kjører javascript funksjonene i html dokumentet, til en spesifik valgt fil. -->
+  <!-- defer betyr at javascript filen skal lastes inn etter at html innholdet er lastet inn. -->
 </body>
 </html>
